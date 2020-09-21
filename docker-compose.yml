@@ -34,6 +34,7 @@ services:
     volumes:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - /etc/letsencrypt/live/aizato.co/:/etc/letsencrypt/live/aizato.co/
     networks:
       - app-network
 
@@ -43,5 +44,5 @@ networks:
     driver: bridge
 #Volumes
 volumes:
-  dbdata:
-    driver: local
+    letsencrypt:
+        
