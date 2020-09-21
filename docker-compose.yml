@@ -21,13 +21,11 @@ services:
       - app-network
 
   #Nginx Service
-  webserverssl:
-    image: staticfloat/nginx-certbot
-    container_name: webserverssl
-    restart: always
+  webserver:
+    image: nginx:alpine
+    container_name: webserver
+    restart: unless-stopped
     tty: true
-    environment:
-        CERTBOT_EMAIL: "aizad1998@gmail.com"
     ports:
       - "80:80"
       - "443:443"
