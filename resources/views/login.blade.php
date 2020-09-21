@@ -11,6 +11,6 @@
             <input type="text" id="passwordbox" name="password"><br><br>
             <input type="submit" value="Submit">
         </form>
-        <a href="http://127.0.0.1:8000">Go back</a>
+        <a href="/">Go back</a>
     </body>
 </html>
